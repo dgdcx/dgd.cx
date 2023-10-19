@@ -1,0 +1,62 @@
+[
+    {
+        "author": "doodle dude",
+        "avatar": "https://eitri.dgd.cx/aos/ad4f7c",
+        "timestamp": 1693168856,
+        "message": "Hello world! 🚕"
+    },
+    {
+        "author": "chat_master",
+        "avatar": "https://eitri.dgd.cx/aos/ff5733",
+        "timestamp": 1693168882,
+        "message": "Hey there! How's it going?"
+    },
+    {
+        "author": "user123",
+        "avatar": "https://eitri.dgd.cx/aos/a8d145",
+        "timestamp": 1693168925,
+        "message": "I'm doing great, thanks! Just working on a project."
+    },
+    {
+        "author": "doodle dude",
+        "avatar": "https://eitri.dgd.cx/aos/5f8e92",
+        "timestamp": 1693168970,
+        "message": "That's awesome! What kind of project are you working on?"
+    },
+    {
+        "author": "user123",
+        "avatar": "https://eitri.dgd.cx/aos/b26f7e",
+        "timestamp": 1693169012,
+        "message": "I'm developing a new mobile app for tracking fitness goals."
+    },
+    {
+        "author": "chat_master",
+        "avatar": "https://eitri.dgd.cx/aos/3498db",
+        "timestamp": 1693169067,
+        "message": "That sounds like a useful app! Are you using any specific technologies?"
+    },
+    {
+        "author": "user123",
+        "avatar": "https://eitri.dgd.cx/aos/2ecc71",
+        "timestamp": 1693169120,
+        "message": "Yes, I'm using React Native for the frontend and Firebase for the backend."
+    },
+    {
+        "author": "doodle dude",
+        "avatar": "https://eitri.dgd.cx/aos/9b59b6",
+        "timestamp": 1693169178,
+        "message": "Cool! How did you learn to develop mobile apps?"
+    },
+    {
+        "author": "user123",
+        "avatar": "https://eitri.dgd.cx/aos/ffd700",
+        "timestamp": 1693169222,
+        "message": "I took online courses and practiced by building small projects."
+    },
+    {
+        "author": "chat_master",
+        "avatar": "https://eitri.dgd.cx/aos/e74c3c",
+        "timestamp": 1693169280,
+        "message": "Continuous learning is key to success in development!"
+    }
+]
