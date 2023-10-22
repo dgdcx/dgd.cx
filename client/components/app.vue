@@ -14,6 +14,11 @@ const router = createRouter({
             component: () => import('../routes/home.vue')
         },
         {
+            name: 'chat',
+            path: '/chat',
+            component: () => import('../routes/chat.vue')
+        },
+        {
             name: 'donate',
             path: '/donate',
             component: () => import('../routes/donate.vue')
