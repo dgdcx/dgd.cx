@@ -36,7 +36,7 @@ export default {
             // Get the 'q' parameter from the URL using Vue Router
             const searchQuery = this.$route.query.q;
             if (!searchQuery || searchQuery == "") return this.searchUpdate()
-            fetch(`http://localhost/api/search?q=${searchQuery}`)
+            fetch(`https://dgd.cx/api/search?q=${searchQuery}`)
                 .then(async response => {
                     this.data = await response.json()
                     console.log(this.data)

@@ -32,7 +32,7 @@ export default {
             return atob(base64Html);
         },
         fetchChatData() {
-            fetch('http://127.0.0.1:5173/api/chat.json') // Adjust the URL as needed
+            fetch('https://dgd.cx/api/chat.json') // Adjust the URL as needed
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok')

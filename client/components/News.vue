@@ -28,7 +28,7 @@ export default {
             return atob(base64Html);
         },
         fetchNewsData() {
-            fetch('http://localhost/api/news.json') // Adjust the URL as needed
+            fetch('https://dgd.cx/api/news.json') // Adjust the URL as needed
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
