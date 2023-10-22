@@ -18,6 +18,9 @@
             <Search class="col-md-auto col-12 me-md-3 m-0"/>
             <Identity class="col-md-auto col-12 m-0"/>
         </div>
+        <div class="alert alert-light mt-3 mb-0 text-center" role="alert">
+            This website is under construction. For up to date information, hop in our discord at <a class="alert-link" target="_blank" href="https://discord.gg/9UcvFa63Wf">discord.gg/9UcvFa63Wf</a>.
+        </div>
     </header>
 </template>
 
