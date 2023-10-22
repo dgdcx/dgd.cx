@@ -1,3 +1,7 @@
+<!--
+    This page is where vue determines which route to show, and spawns the Template for all pages.
+-->
+
 <script>
 // Import
 import { createApp } from 'vue'
@@ -16,7 +20,7 @@ const router = createRouter({
         {
             name: 'chat',
             path: '/chat',
-            component: () => import('../routes/chat.vue')
+            component: () => import('../routes/donate.vue')
         },
         {
             name: 'donate',
