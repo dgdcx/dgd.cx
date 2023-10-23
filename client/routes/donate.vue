@@ -35,6 +35,7 @@ var handleResult = function (result) {
 
 document.querySelectorAll('button').forEach(function (button) {
     button.addEventListener('click', function (e) {
+        console.log("Clicked!")
         var mode = e.target.dataset.checkoutMode;
         var priceId = e.target.dataset.priceId;
         var items = [{ price: priceId, quantity: 1 }];
