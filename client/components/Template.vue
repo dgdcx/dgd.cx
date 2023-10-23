@@ -1,5 +1,5 @@
 <!--
-    This document is basically the template for all pages
+    This document adds the header and footer around a given route provided by the app.vue component.
 -->
 <script>
 import Header from './Header.vue'

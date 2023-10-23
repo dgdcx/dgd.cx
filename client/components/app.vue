@@ -1,5 +1,6 @@
 <!--
-    This page is where vue determines which route to show, and spawns the Template for all pages.
+    This file functions as the router. It mounts content onto #app.
+    It uses the Template.vue component to generate the page around the corresponding route component.
 -->
 
 <script>
