@@ -7,24 +7,8 @@
                     <strong>One-time Donation</strong>
                 </p>
                 <p>
-                    <button class="m-1 btn btn-success" data-checkout-mode="payment" data-price-id="sku_GU4JYXyvvRb2sX">
-                        Donate $5.00 once
-                    </button>
-                    <button class="m-1 btn btn-success" data-checkout-mode="payment" data-price-id="sku_GU4KO8nfdg8G2Z">
-                        Donate $15.00 once
-                    </button>
-                    <button class="m-1 btn btn-success" data-checkout-mode="payment" data-price-id="sku_GU4LB0wBViiYsm">
-                        Donate $50.00 once
-                    </button>
-                </p>
-            </section>
-            <section class="p-3">
-                <p>
-                    <strong>Monthly Donation</strong>
-                </p>
-                <p>
-                    <button class="btn btn-success" data-checkout-mode="subscription" data-price-id="plan_GU4MXg0k0Uv1S6">
-                        Donate $20.00 per month
+                    <button class="m-1 btn btn-success" data-checkout-mode="payment" data-price-id="price_1O4RnmIlyJ2E7uGysLBHcPST">
+                        Donate
                     </button>
                 </p>
             </section>
@@ -34,23 +18,18 @@
 
 <script>
 // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-var PUBLISHABLE_KEY = 'pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP';
+var PUBLISHABLE_KEY = 'pk_test_51NVevBIlyJ2E7uGyCP3Wy4HgqtMoseqFATzI02ONNtJENCgY9vOUsWH6GHw8Yq7SYIAUhi11ZJaLEe2pEf3jMQqa00rIyG84tz';
 // Replace with the domain you want your users to be redirected back to after payment
-var DOMAIN = location.href.replace(/[^/]*$/, '');
-
-if (PUBLISHABLE_KEY === 'pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP') {
-    console.log(
-        'Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys'
-    );
-}
+var DOMAIN = "https://dgd.cx/"; //var DOMAIN = location.href.replace(/[^/]*$/, '');
 
 var stripe = Stripe(PUBLISHABLE_KEY);
 
 // Handle any errors from Checkout
 var handleResult = function (result) {
     if (result.error) {
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
+        alert(`Stripe checkout error: ${result.error.message}`)
+        //var displayError = document.getElementById('error-message');
+        //displayError.textContent = result.error.message;
     }
 };
 
