@@ -29,10 +29,10 @@ phrases["Do a barrel roll!"]="/phrases/2.jpg"
 html_file="./index.html"
 
 # Select a random phrase and its associated image URL
-random_key="${!phrase_image_map[@]}"
+random_key="${!phrases[@]}"
 random_index=$((RANDOM % ${#random_key[@]}))
 selected_phrase="${random_key[$random_index]}"
-selected_image_url="${phrase_image_map[$selected_phrase]}"
+selected_image_url="${phrases[$selected_phrase]}"
 
 # Escape double quotes in the selected phrase
 escaped_description=$(sed 's/"/\\"/g' <<< "$selected_phrase")
