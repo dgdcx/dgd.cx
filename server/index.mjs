@@ -42,6 +42,7 @@ let getStripeSettings = () => {
     }
     return settings;
 };
+console.log(getStripeSettings())
 var stripeSettings = getStripeSettings();
 // Create a new stripe session
 app.post('/api/stripe/checkout', async (req, res) => {
