@@ -1,10 +1,11 @@
 import express from 'express';
-import stripe from 'stripe';
+import _stripe from 'stripe';
 
 const router = express.Router();
 
 let getStripeSettings = () => {
     let settings = {
+        stripe: null,
         valid: true,
         key: process.env.STRIPE_PUBLISHABLE_KEY,
         prices: {
@@ -24,6 +25,8 @@ let getStripeSettings = () => {
         }
         break;
     }
+    if (settings.valid)
+        settings.stripe = _stripe(settings.key);
     return settings;
 };
 var stripeSettings = getStripeSettings();
