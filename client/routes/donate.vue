@@ -3,28 +3,27 @@
         style="position:relative;">
         <h1>Donate</h1>
         <div class="container d-flex flex-wrap justify-content-center align-items-center">
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://cdn.discordapp.com/app-assets/1159142823522746408/store/1162283505389146234.png?size=600">
-                <div class="card-body">
-                    <h5 class="card-title">One-Time Donation</h5>
-                    <p class="card-text">Select a custom amount to donate to The Dagda Federation.</p>
-                    <a href="/api/stripe/checkout" class="btn btn-success" data-toggle="tooltip"
-                        data-html="true" title="Transactions are processed by Stripe.">Donate</a>
+            <form action="/api/stripe/checkout" method="POST">
+                <div class="card">
+                    <img class="card-img-top" src="https://cdn.discordapp.com/app-assets/1159142823522746408/store/1162283505389146234.png?size=600">
+                    <div class="card-body">
+                        <h5 class="card-title">One-Time Donation</h5>
+                        <p class="card-text">Select a custom amount to donate to The Dagda Federation.</p>
+                        <button type="submit" class="btn btn-success disabled">Coming Soon</button>
+                    </div>
                 </div>
-            </div>
-            <div class="spacer d-none d-md-block"></div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://cdn.discordapp.com/app-assets/1159142823522746408/store/1162283505389146234.png?size=600">
-                <div class="card-body">
-                    <h5 class="card-title">Recurring Donation</h5>
-                    <p class="card-text">Select an amount to donate every month to The Dagda Federation.</p>
-                    <a href="#" class="btn btn-success disabled">Coming Soon</a>
+                <div class="spacer d-none d-md-block"></div>
+                <div class="card">
+                    <img class="card-img-top" src="https://cdn.discordapp.com/app-assets/1159142823522746408/store/1162283505389146234.png?size=600">
+                    <div class="card-body">
+                        <h5 class="card-title">Recurring Donation</h5>
+                        <p class="card-text">Select an amount to donate every month to The Dagda Federation.</p>
+                        <button type="submit" class="btn btn-success disabled">Coming Soon</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
-        <img class="stripe mt-sm-0 mt-4" src="/stripe/white.svg" />
+        <img class="mark mt-sm-0 mt-4" src="/stripe/white.svg" />
     </div>
     <component is="script" src="https://js.stripe.com/v3/" async></component>
 </template>
@@ -48,16 +47,16 @@
     animation-direction: alternate;
 }
 
-.stripe {
+.mark {
     max-height: 2em;
 }
 
 .spacer {
-    width:1em;
+    width: 1em;
 }
 
 .card {
-    margin-bottom:1em;
-    width:20em;
+    margin-bottom: 1em;
+    width: 20em;
 }
 </style>
