@@ -12,4 +12,5 @@ export default {
         <h1>Statistics</h1>
         <PieChart/>
     </main>
+    <component is="script" src="https://cdn.jsdelivr.net/npm/chart.js" async></component>
 </template>
