@@ -33,17 +33,15 @@ let getStripeSettings = () => {
         settings.valid = false;
         console.log(`${KEY} seems to be invalid, disabling stripe checkout`);
     }
-    for (key in stripeSettings.prices) {
+    for (key in settings.prices) {
         if (typeof settings.prices[key] != typeof "" || settings.prices[key].length < 1) {
             settings.valid = false;
             console.log(`${KEY} seems to be invalid, disabling stripe checkout`);
         }
         break;
     }
-    console.log(settings);
     return settings;
 };
-console.log(getStripeSettings())
 var stripeSettings = getStripeSettings();
 // Create a new stripe session
 app.post('/api/stripe/checkout', async (req, res) => {
