@@ -6,46 +6,21 @@
 <script>
 // Import
 import { createApp } from 'vue'
-import { createWebHistory, createRouter } from 'vue-router'
 import Template from './Template.vue'
-
-// Router creation
-// reading for later when auth ready: https://stackoverflow.com/questions/43424302/how-to-protect-client-side-routes-in-vue-js
-const router = createRouter({
-    history: createWebHistory(),
-    routes: [
-        {
-            name: 'home',
-            path: '/',
-            component: () => import('../routes/home.vue')
-        },
-        {
-            name: 'chat',
-            path: '/chat',
-            component: () => import('../routes/chat.vue')
-        },
-        {
-            name: 'donate',
-            path: '/donate',
-            component: () => import('../routes/donate.vue')
-        },
-        {
-            name: 'search',
-            path: '/search',
-            component: () => import('../routes/search.vue')
-        },
-        {
-            name: 'statistics',
-            path: '/statistics',
-            component: () => import('../routes/statistics.vue')
-        }
-    ]
-})
+import { router } from './router.vue'
 
 // App creation
 const app = createApp({
     template: `<Template><router-view></router-view></Template>`,
-    components: { Template }
+    components: { Template },
+    watch: {
+        $route: {
+            immediate: true,
+            handler(to, from) {
+                document.title = to.meta.title || 'Dagda';
+            }
+        },
+    }
 })
 
 // App setup
