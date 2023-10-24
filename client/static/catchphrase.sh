@@ -33,7 +33,8 @@ random_key="${!phrases[@]}"
 random_index=$((RANDOM % ${#random_key[@]}))
 selected_phrase="${random_key[$random_index]}"
 selected_image_url="${phrases[$selected_phrase]}"
-
+echo $random_key
+echo $random_index
 # Escape double quotes in the selected phrase
 escaped_description=$(sed 's/"/\\"/g' <<< "$selected_phrase")
 
