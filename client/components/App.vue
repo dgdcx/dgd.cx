@@ -1,18 +1,17 @@
 <!--
-    This file functions as the router. It mounts content onto #app.
-    It uses the Template.vue component to generate the page around the corresponding route component.
+    It mounts content onto #app.
 -->
 
 <script>
 // Import
 import { createApp } from 'vue'
-import Template from './Template.vue'
+import template from './Template.vue'
 import { router } from './Router.vue'
 
 // App creation
 const app = createApp({
-    template: `<Template><router-view></router-view></Template>`,
-    components: { Template },
+    template: `<template><router-view></router-view></template>`,
+    components: { template },
     watch: {
         $route: {
             immediate: true,
