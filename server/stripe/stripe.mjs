@@ -11,8 +11,8 @@ let getStripeSettings = () => {
         prices: {
             donation_onetime_custom: process.env.STRIPE_PRICE_CUSTOM
         },
-        success: "https://dgd.cx/stripe/success",
-        cancel: "https://dgd.cx/stripe/cancel"
+        success: "https://dgd.cx/donate?status=successful",
+        cancel: "https://dgd.cx/donate?status=cancelled"
     }
     if (typeof settings.key != typeof "" || settings.key.length < 1) {
         settings.valid = false;
@@ -32,21 +32,29 @@ let getStripeSettings = () => {
 var stripeSettings = getStripeSettings();
 
 router.post('/checkout', async (req, res) => {
-    if (!stripeSettings.valid) res.status(503).end();
-    const session = await stripeSettings.stripe.checkout.sessions.create
-        ({
-            line_items: [{
-                // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                price
-                    : process.env.STRIPE_PRICE_CUSTOM,
-                quantity
-                    : 1,
-            }],
-            mode: 'payment',
-            success_url: stripeSettings.success,
-            cancel_url: stripeSettings.cancel
-        });
-    res.redirect(303, session.url);
+    let price = false;
+
+    if (!stripeSettings.valid) {
+        return res.status(503).end()
+    } else if (!req.body || !req.body.choice) {
+        return res.status(400).end()
+    } else if (req.body.choice == "custom") {
+        price = stripeSettings.prices.donation_onetime_custom;
+    } else {
+        return res.status(400).end()
+    }
+
+    const session = await stripeSettings.stripe.checkout.sessions.create({
+        line_items: [{
+            // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+            price: price,
+            quantity: 1,
+        }],
+        mode: 'payment',
+        success_url: stripeSettings.success,
+        cancel_url: stripeSettings.cancel
+    })
+    res.redirect(303, session.url)
 });
 
 export { router };
