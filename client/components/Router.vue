@@ -5,7 +5,7 @@ const DEFAULT_TITLE = "Dagda"
 
 // Router creation
 // reading for later when auth ready: https://stackoverflow.com/questions/43424302/how-to-protect-client-side-routes-in-vue-js
-export const router = createRouter({
+export default createRouter({
     history: createWebHistory(),
     routes: [
         {

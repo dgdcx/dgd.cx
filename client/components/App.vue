@@ -5,13 +5,13 @@
 <script>
 // Import
 import { createApp } from 'vue'
-import template from './Template.vue'
-import { router } from './Router.vue'
+import Template from './Template.vue'
+import Router from './Router.vue'
 
 // App creation
 const app = createApp({
-    template: `<template><router-view></router-view></template>`,
-    components: { template },
+    template: `<Template><router-view></router-view></Template>`,
+    components: { Template },
     watch: {
         $route: {
             immediate: true,
@@ -23,7 +23,7 @@ const app = createApp({
 })
 
 // App setup
-app.use(router)
+app.use(Router)
 app.mount('#app')
 
 // Export
