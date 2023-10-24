@@ -40,6 +40,7 @@ let getStripeSettings = () => {
         }
         break;
     }
+    console.log(settings);
     return settings;
 };
 console.log(getStripeSettings())
