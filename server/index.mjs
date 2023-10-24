@@ -31,12 +31,12 @@ let getStripeSettings = () => {
     }
     if (typeof settings.key != typeof "" || settings.key.length < 1) {
         settings.valid = false;
-        console.log(`${KEY} seems to be invalid, disabling stripe checkout`);
+        console.log(`settings.key seems to be invalid, disabling stripe checkout`);
     }
-    for (key in settings.prices) {
+    for (let key in settings.prices) {
         if (typeof settings.prices[key] != typeof "" || settings.prices[key].length < 1) {
             settings.valid = false;
-            console.log(`${KEY} seems to be invalid, disabling stripe checkout`);
+            console.log(`settings.prices.${key} seems to be invalid, disabling stripe checkout`);
         }
         break;
     }
