@@ -33,7 +33,7 @@ var stripeSettings = getStripeSettings();
 
 router.post('/checkout', async (req, res) => {
     if (!stripeSettings.valid) res.status(503).end();
-    const session = await stripe.checkout.sessions.create
+    const session = await stripeSettings.stripe.checkout.sessions.create
         ({
             line_items: [{
                 // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
