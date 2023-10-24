@@ -10,6 +10,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 import Template from './Template.vue'
 
 // Router creation
+// reading for later when auth ready: https://stackoverflow.com/questions/43424302/how-to-protect-client-side-routes-in-vue-js
 const router = createRouter({
     history: createWebHistory(),
     routes: [

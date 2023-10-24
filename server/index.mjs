@@ -44,7 +44,7 @@ let getStripeSettings = () => {
 };
 var stripeSettings = getStripeSettings();
 // Create a new stripe session
-app.post('/api/stripe/session', async (req, res) => {
+app.post('/api/stripe/checkout', async (req, res) => {
     if (!stripeSettings.valid) res.status(503).end();
     const session = await stripe.checkout.sessions.create
         ({

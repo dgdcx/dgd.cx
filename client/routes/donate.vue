@@ -1,24 +1,63 @@
 <template>
-    <div class="container p-3 d-flex flex-column justify-content-evenly align-items-center text-center">
-        <div class="">
-            <h1>Donate</h1>
-        </div>
+    <div class="container my-3 d-flex flex-column justify-content-evenly align-items-center text-center"
+        style="position:relative;">
+        <h1>Donate</h1>
         <div class="container d-flex flex-wrap justify-content-center align-items-center">
-            <section class="p-3">
-                <p>
-                    <strong>One-time Donation</strong>
-                </p>
-                <p>
-                    <button class="m-1 btn btn-success" data-checkout-mode="payment"
-                        data-price-id="price_1O4RnmIlyJ2E7uGysLBHcPST">
-                        Donate
-                    </button>
-                </p>
-            </section>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.discordapp.com/app-assets/1159142823522746408/store/1162283505389146234.png?size=600">
+                <div class="card-body">
+                    <h5 class="card-title">One-Time Donation</h5>
+                    <p class="card-text">Select a custom amount to donate to The Dagda Federation.</p>
+                    <a href="/api/stripe/checkout" class="btn btn-success" data-toggle="tooltip"
+                        data-html="true" title="Transactions are processed by Stripe.">Donate</a>
+                </div>
+            </div>
+            <div class="spacer d-none d-md-block"></div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.discordapp.com/app-assets/1159142823522746408/store/1162283505389146234.png?size=600">
+                <div class="card-body">
+                    <h5 class="card-title">Recurring Donation</h5>
+                    <p class="card-text">Select an amount to donate every month to The Dagda Federation.</p>
+                    <a href="#" class="btn btn-success disabled">Coming Soon</a>
+                </div>
+            </div>
         </div>
+        <img class="stripe mt-sm-0 mt-4" src="/stripe/white.svg" />
     </div>
     <component is="script" src="https://js.stripe.com/v3/" async></component>
-    <component is="script" src="https://dgd.cx/stripe.js" async></component>
 </template>
 
-<style scoped></style>
+<style scoped>
+@keyframes pulse {
+    from {
+        box-shadow: 0px 0px 1em rgba(0, 0, 0, 0);
+    }
+
+    to {
+        box-shadow: 0px 0px 1em gold;
+    }
+}
+
+.pulse {
+    animation-duration: 1s;
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.stripe {
+    max-height: 2em;
+}
+
+.spacer {
+    width:1em;
+}
+
+.card {
+    margin-bottom:1em;
+    width:20em;
+}
+</style>
