@@ -7,7 +7,7 @@ let getStripeSettings = () => {
     let settings = {
         stripe: null,
         valid: true,
-        key: process.env.STRIPE_PUBLISHABLE_KEY,
+        key: process.env.STRIPE_SECRET_KEY,
         prices: {
             donation_onetime_custom: process.env.STRIPE_PRICE_CUSTOM
         },
