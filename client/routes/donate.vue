@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h5 class="card-title">One-Time Donation</h5>
                         <p class="card-text">Select a custom amount to donate to The Dagda Federation.</p>
-                        <input type="submit" name="choice" value="custom" class="btn btn-success">Donate</input>
+                        <input type="submit" name="choice" value="Donate" class="btn btn-success"/>
                     </div>
                 </div>
                 <div class="spacer d-none d-md-block"></div>
@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Recurring Donation</h5>
                         <p class="card-text">Select an amount to donate every month to The Dagda Federation.</p>
-                        <input type="submit" name="choice" value="disabled" class="btn btn-success disabled">Coming Soon</input>
+                        <input type="submit" name="choice" value="Coming Soon" class="btn btn-success disabled"/>
                     </div>
                 </div>
             </div>

@@ -38,7 +38,7 @@ router.post('/checkout', async (req, res) => {
         return res.status(503).end()
     } else if (!req.body || !req.body.choice) {
         return res.status(400).end()
-    } else if (req.body.choice == "custom") {
+    } else if (req.body.choice == "Donate") {
         price = stripeSettings.prices.donation_onetime_custom;
     } else {
         return res.status(400).end()
