@@ -23,7 +23,7 @@
                 </div>
             </form>
         </div>
-        <img class="mark mt-sm-0 mt-4" src="/stripe/white.svg" />
+        <img class="stripe-mark mt-sm-0 mt-4" src="/stripe/white.svg" />
     </div>
     <component is="script" src="https://js.stripe.com/v3/" async></component>
 </template>
@@ -47,7 +47,7 @@
     animation-direction: alternate;
 }
 
-.mark {
+.stripe-mark {
     max-height: 2em;
 }
 
