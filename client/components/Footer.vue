@@ -28,9 +28,10 @@ export default {
             <div class="col d-flex flex-column justify-content-start">
                 <p class="text-center"><strong>Links</strong></p>
                 <ul class="list-unstyled align-self-center">
-                    <li><a href="https://dgd.cx/donate" target="_blank" class="text-reset">Donate</a></li>
+                    <li><router-link to="/shop" class="text-reset">Shop</router-link></li>
                     <li><a href="https://status.dgd.cx" target="_blank" class="text-reset">Status</a></li>
                     <li><a href="#" target="_blank" class="text-reset">Leaderboard</a></li>
+                    <li><router-link to="/legal" class="text-reset">Legal</router-link></li>
                 </ul>
             </div>
             <div class="col d-flex flex-column justify-content-start">

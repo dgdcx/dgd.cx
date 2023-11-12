@@ -1,0 +1,2 @@
+# Terms
+Lorem ipsum dolor

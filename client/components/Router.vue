@@ -21,10 +21,10 @@ export default createRouter({
             meta: { title: `${DEFAULT_TITLE} | Chat` }
         },
         {
-            name: 'donate',
-            path: '/donate',
-            component: () => import('../routes/donate.vue'),
-            meta: { title: `${DEFAULT_TITLE} | Donate` }
+            name: 'shop',
+            path: '/shop',
+            component: () => import('../routes/shop.vue'),
+            meta: { title: `${DEFAULT_TITLE} | Shop` }
         },
         {
             name: 'search',
@@ -37,6 +37,15 @@ export default createRouter({
             path: '/statistics',
             component: () => import('../routes/statistics.vue'),
             meta: { title: `${DEFAULT_TITLE} | Statistics` }
+        },
+        {
+            name: 'legal',
+            path: '/legal',
+            component: () => import('../routes/legal.vue'),
+            meta: { title: `${DEFAULT_TITLE} | Legal` }
+        },
+        {
+            path: '/:pathMatch(.*)*', redirect: '/'
         }
     ]
 })
