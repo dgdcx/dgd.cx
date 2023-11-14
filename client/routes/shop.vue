@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h5 class="card-title">One-Time VIP Purchase</h5>
                         <p class="card-text">Select a custom amount to spend for VIP with The Dagda Federation.</p>
-                        <input type="submit" name="choice" value="Purchase" class="btn btn-success"/>
+                        <button type="submit" name="choice" value="onetime_custom" class="btn btn-success">Purchase</button>
                     </div>
                 </div>
                 <div class="spacer d-none d-md-block"></div>
@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Recurring VIP Subscription</h5>
                         <p class="card-text">Select an amount to spend every month for VIP with The Dagda Federation.</p>
-                        <input type="submit" name="choice" value="Coming Soon" class="btn btn-success disabled"/>
+                        <button type="submit" name="choice" value="recurring_custom" class="btn btn-success disabled">Coming soon</button>
                     </div>
                 </div>
             </div>
