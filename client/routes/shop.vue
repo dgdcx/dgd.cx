@@ -18,11 +18,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Recurring VIP Subscription</h5>
                         <p class="card-text">Select an amount to spend every month for VIP with The Dagda Federation.</p>
-                        <button type="submit" name="choice" value="recurring_custom" class="btn btn-success disabled">Coming soon</button>
+                        <button type="submit" name="choice" value="recurring_custom" class="btn btn-success">Subscribe</button>
                     </div>
                 </div>
             </div>
         </form>
+        <div><h4>Need help or have a question?</h4><p>Please message @Sonicscream on Discord, or send an email to <a href="mailto:support@dgd.cx">support@dgd.cx</a>.</p></div>
         <img class="stripe-mark mt-sm-0 mt-4" src="/stripe/white.svg" />
     </div>
     <component is="script" src="https://js.stripe.com/v3/" async></component>
