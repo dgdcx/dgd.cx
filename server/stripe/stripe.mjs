@@ -55,6 +55,11 @@ router.post('/checkout', async (req, res) => {
             // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
             price: price,
             quantity: 5,
+            adjustable_quantity : {
+                enabled: true,
+                minimum: 1,
+                maximum: 100
+            }
         }]
         mode = 'subscription';
     } else {
