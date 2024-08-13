@@ -56,7 +56,7 @@ router.post('/checkout', async (req, res) => {
             price: price,
             quantity: 5,
         }]
-        mode = 'recurring';
+        mode = 'subscription';
     } else {
         return res.status(400).end()
     }
