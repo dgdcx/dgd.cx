@@ -35,6 +35,7 @@ var stripeSettings = getStripeSettings();
 router.post('/checkout', async (req, res) => {
     let price = false;
     let line_items = false;
+    let mode = false;
 
     if (!stripeSettings.valid) {
         return res.status(503).end()
@@ -47,6 +48,7 @@ router.post('/checkout', async (req, res) => {
             price: price,
             quantity: 1,
         }]
+        mode = 'payment';
     } else if (req.body.choice == "recurring_custom") {
         price = stripeSettings.prices.donation_recurring_custom;
         line_items = [{
@@ -54,6 +56,7 @@ router.post('/checkout', async (req, res) => {
             price: price,
             quantity: 5,
         }]
+        mode = 'recurring';
     } else {
         return res.status(400).end()
     }
@@ -61,7 +64,7 @@ router.post('/checkout', async (req, res) => {
     if (price && line_items) {
         const session = await stripeSettings.stripe.checkout.sessions.create({
             line_items: line_items,
-            mode: 'payment',
+            mode: mode,
             success_url: stripeSettings.success,
             cancel_url: stripeSettings.cancel
         })
